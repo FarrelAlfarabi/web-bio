@@ -1,88 +1,51 @@
 import React from "react";
 import "../styles/App.css";
 
-
-// React + JavaScript single-file portfolio site inspired by the screenshot.
-// Structure: Hero, Stats, About, Skills, Services, Projects, Testimonials, Blog, Contact, Footer
-// Data filled from Farrel Alfarabi Saleh's CV. Replace image paths with your own.
-
 const DATA = {
   name: "Farrel Alfarabi Saleh",
-  tagline: "I build & design software",
+  tagline: "I focus on management & marketing",
   email: "farrel.abi.saleh@gmail.com",
   phone: "+62 851-5833-3422",
   location: "Indonesia",
   linkedin: "https://www.linkedin.com/in/farrel-alfarabi-saleh/",
   github: "https://github.com/FarrelAlfarabi",
   about:
-    "Dedicated and goal‑oriented Master of Management graduate with a Computer Science foundation. Experience in software development, system programming, and UI/UX design. Passionate about bridging technology and management with a focus on IT and project management.",
+    "Dedicated and goal-oriented Master of Management graduate with strong skills in marketing, project management, and business strategy. Experienced in coordinating teams, managing campaigns, and bridging technology with management to deliver impactful results.",
   highlights: [
     { label: "Projects", value: 8 },
-    { label: "Skills", value: 8 },
+    { label: "Skills", value: 12 },
     { label: "Leadership", value: 5 },
     { label: "Publications", value: 1 },
   ],
   skills: [
-    { name: "JavaScript", level: 92 },
-    { name: "HTML", level: 90 },
-    { name: "jQuery", level: 68 },
-    { name: "Python", level: 82 },
-    { name: "ReactJS", level: 88 },
-    { name: "Django", level: 75 },
-    { name: "SQL", level: 76 },
-    { name: "Flutter", level: 72 },
-    { name: "Git", level: 86 },
-    { name: "SEO", level: 75 },
+    { name: "Marketing Strategy", level: 92 },
+    { name: "Project Management", level: 90 },
+    { name: "Business Analysis", level: 88 },
+    { name: "Content Marketing", level: 82 },
+    { name: "Digital Campaigns", level: 86 },
+    { name: "Market Research", level: 84 },
+    { name: "Branding", level: 80 },
+    { name: "Communication", level: 95 },
+    { name: "JavaScript", level: 80 },
+    { name: "ReactJS", level: 78 },
+    { name: "Python", level: 75 },
+    { name: "SQL", level: 72 },
   ],
   services: [
-    { title: "Web Design", desc: "Clean, modern UI with accessibility in mind", icon: "🖌️" },
-    { title: "Web Development", desc: "React SPAs, REST/JSON backends", icon: "💻" },
-    { title: "Brand Design", desc: "Logos, identity kits, assets", icon: "🏷️" },
-    { title: "Mobile Apps", desc: "Flutter + Firebase prototypes", icon: "📱" },
-    { title: "IT & Project Mgmt", desc: "Roadmaps, timelines, stakeholder comms", icon: "📈" },
-    { title: "Content & Social", desc: "Campaign visuals, copy, scheduling", icon: "📣" },
+    { title: "Marketing Campaigns", desc: "Design and execution of integrated campaigns across channels", icon: "📣" },
+    { title: "Market Research", desc: "Consumer insights, surveys, and data analysis to guide decisions", icon: "📊" },
+    { title: "Project Management", desc: "Timeline planning, stakeholder coordination, and reporting", icon: "📈" },
+    { title: "Brand Strategy", desc: "Positioning, messaging, and identity development", icon: "🏷️" },
+    { title: "Digital Marketing", desc: "SEO, SEM, and social media management", icon: "💻" },
+    { title: "Content Creation", desc: "Copywriting, social visuals, and campaign assets", icon: "✍️" },
   ],
   projects: [
-    { title: "Real‑Time Earthquake Source Detection", img: "/images/p1.jpg" },
-    { title: "Automated Machine Learning Website", img: "/images/p2.jpg" },
-    { title: "Pantau PeradilanMu (Android)", img: "/images/p3.jpg" },
-    { title: "Gasturah – Bangkit Capstone", img: "/images/p4.jpg" },
-    { title: "Research Frontend Prototypes", img: "/images/p5.jpg" },
-    { title: "UI/UX Concept Work", img: "/images/p6.jpg" },
-    { title: "Marketing Design Samples", img: "/images/p7.jpg" },
-    { title: "Data Viz Demos", img: "/images/p8.jpg" },
-  ],
-  testimonials: [
-    {
-      quote:
-        "Farrel’s clarity, speed, and polish consistently exceeded expectations.",
-      name: "Project Sponsor",
-      role: "University Initiative",
-      avatar: "/images/u1.jpg",
-    },
-    {
-      quote: "Great partner—organized, communicative, and design‑literate.",
-      name: "Team Lead",
-      role: "Capstone Team",
-      avatar: "/images/u2.jpg",
-    },
-    {
-      quote:
-        "From zero to working demo under tight timelines—impressive delivery.",
-      name: "Faculty Advisor",
-      role: "Research",
-      avatar: "/images/u3.jpg",
-    },
-  ],
-  blog: [
-    {
-      date: "Feb 2025",
-      title: "AI & eWOM Influence on Fashion Purchases on TikTok",
-      desc:
-        "Published in Syntax Literate (Sinta 4). Study on how AI & eWOM shape purchase decisions.",
-      img: "/images/research.jpg",
-      link: "#",
-    },
+    { title: "Marketing Campaign – University Event", img: "/images/p1.jpg" },
+    { title: "Market Research Project – Consumer Trends", img: "/images/p2.jpg" },
+    { title: "Brand Identity for Student Committee", img: "/images/p3.jpg" },
+    { title: "Digital Campaign for Law Faculty App", img: "/images/p4.jpg" },
+    { title: "Bangkit Capstone – Gasturah", img: "/images/p5.jpg" },
+    { title: "Content Design for MMUI Committee", img: "/images/p6.jpg" },
   ],
 };
 
@@ -107,7 +70,6 @@ export default function Portfolio() {
   const d = DATA;
   return (
     <div className="site">
-      {/* Header */}
       <header className="topbar">
         <div className="container row">
           <a href="#hero" className="brand">{d.name.split(" ")[0]}</a>
@@ -117,8 +79,6 @@ export default function Portfolio() {
               ["Skills", "skills"],
               ["Services", "services"],
               ["Projects", "projects"],
-              ["Testimonials", "testimonials"],
-              ["Blog", "blog"],
               ["Contact", "contact"],
             ].map(([label, id]) => (
               <a key={id} href={`#${id}`}>{label}</a>
@@ -128,11 +88,10 @@ export default function Portfolio() {
         </div>
       </header>
 
-      {/* Hero */}
       <section id="hero" className="hero">
         <div className="container grid2">
           <div>
-            <p className="eyebrow">Hello, {d.tagline.toLowerCase()}</p>
+            <p className="eyebrow">Hello, I focus on management and marketing</p>
             <h1>Hi, I am <span className="accent">{d.name.split(" ")[0]}</span>. This is my favorite work.</h1>
             <p className="lede">{d.about}</p>
             <div className="row gap">
@@ -155,7 +114,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* About */}
       <section id="about" className="section">
         <div className="container grid2">
           <img className="card media" src="/images/about.jpg" alt="About" />
@@ -173,7 +131,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Skills */}
       <section id="skills" className="section">
         <div className="container">
           <h2>My Skills</h2>
@@ -184,7 +141,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Services */}
       <section id="services" className="section alt">
         <div className="container">
           <p className="eyebrow">Capabilities</p>
@@ -201,7 +157,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Projects Gallery */}
       <section id="projects" className="section">
         <div className="container">
           <h2>Our Projects</h2>
@@ -216,48 +171,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section id="testimonials" className="section olive">
-        <div className="container">
-          <p className="eyebrow center">Testimonials</p>
-          <h2 className="center">What client says about?</h2>
-          <div className="cards grid3">
-            {d.testimonials.map((t, i) => (
-              <div key={i} className="card quote">
-                <p>“{t.quote}”</p>
-                <div className="person">
-                  <img src={t.avatar} alt={t.name} />
-                  <div>
-                    <div className="person-name">{t.name}</div>
-                    <div className="person-role">{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Blog */}
-      <section id="blog" className="section">
-        <div className="container">
-          <h2>Our Blog</h2>
-          <div className="cards grid3">
-            {d.blog.map((b) => (
-              <a key={b.title} className="card post" href={b.link}>
-                <img src={b.img} alt={b.title} />
-                <div className="post-body">
-                  <div className="post-date">{b.date}</div>
-                  <h3>{b.title}</h3>
-                  <p>{b.desc}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact */}
       <section id="contact" className="section cta">
         <div className="container grid2">
           <div>
@@ -282,12 +195,11 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="footer">
         <div className="container grid4">
           <div>
             <h4>Let's be in touch</h4>
-            <p>Open to software roles, product/IT management, and UI/UX work.</p>
+            <p>Open to roles in management, marketing, and project coordination.</p>
             <a className="btn small" href="/cv.pdf" download>Download CV</a>
           </div>
           <div>

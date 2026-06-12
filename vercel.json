@@ -1,7 +1,11 @@
 {
   "build": {
     "env": {
-      "UV_PYTHON": "3.12"
+      "UV_PYTHON": "3.12",
+      "NODE_OPTIONS": "--openssl-legacy-provider"
     }
-  }
+  },
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "framework": "create-react-app"
 }

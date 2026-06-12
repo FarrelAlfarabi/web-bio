@@ -1,0 +1,34 @@
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+  margin-top: 14px;
+}
+
+/* About image styling to fit in card */
+.card.media {
+  height: 350px;
+  max-height: 350px;
+}
+
+.card.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info dt {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.info dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.info a {
+  color: var(--accent);
+  text-decoration: none;
+}

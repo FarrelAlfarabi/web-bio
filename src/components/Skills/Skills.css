@@ -1,0 +1,33 @@
+.skill {
+  margin-bottom: 12px;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.bar {
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+@media (min-width: 900px) {
+  .skill {
+    margin-bottom: 10px;
+  }
+  .bar {
+    height: 8px;
+  }
+}

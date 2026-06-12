@@ -1,0 +1,44 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: saturate(180%) blur(10px);
+  background: rgba(255, 255, 255, .8);
+  border-bottom: 1px solid var(--border);
+}
+
+.topbar .brand {
+  font-weight: 800;
+  letter-spacing: .2px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 20px;
+}
+
+.topbar .nav {
+  display: none;
+  gap: 20px;
+}
+
+.topbar .nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.topbar .nav a:hover {
+  color: var(--accent);
+}
+
+.topbar .container {
+  padding: 14px 16px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .topbar .nav {
+    display: flex;
+  }
+}

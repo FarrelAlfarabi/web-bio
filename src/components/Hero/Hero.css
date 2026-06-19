@@ -1,66 +1,70 @@
-.hero-container {
-  padding: 100px 5%;
-  max-width: 1200px;
-  margin: 0 auto;
+.hero-section {
+  padding-top: 120px; 
+  padding-bottom: 4rem;
+  background-color: #ffffff;
 }
 
-.hero-content {
-  display: flex;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile-first: 1 column */
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
 }
 
 .hero-text {
-  flex: 1;
+  text-align: center;
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
-  line-height: 1.1;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
   color: #1a202c;
-  margin-bottom: 1.5rem;
 }
 
 .hero-text p {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: #4a5568;
   margin-bottom: 2rem;
 }
 
-/* Image Styling - THIS FIXES THE SIZE */
-.hero-image-wrapper {
-  flex: 0 0 400px; /* Forces the image to take up specific desktop width */
-}
-
-.hero-profile-img {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* Keeps it a perfect square */
-  object-fit: cover;   /* Prevents the image from stretching */
-  border-radius: 20px; /* Modern, clean look */
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive: Stack on mobile */
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column-reverse; /* Image moves to bottom on mobile */
-    gap: 2rem;
-    text-align: center;
-  }
-  
-  .hero-image-wrapper {
-    flex: 0 0 100%;
-    max-width: 300px; /* Slightly smaller on mobile for better fit */
-  }
-}
-
-.btn-primary {
+.hero-cta {
+  display: inline-block;
   padding: 1rem 2rem;
-  background: #2563eb;
+  background-color: #2563eb;
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
-  display: inline-block;
+}
+
+.hero-image-container {
+  width: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto; /* CRITICAL: Prevents stretching/overlap */
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Desktop: Switch to 2 columns */
+@media (min-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 4rem;
+    text-align: left;
+  }
+  
+  .hero-text {
+    text-align: left;
+  }
+  
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
 }

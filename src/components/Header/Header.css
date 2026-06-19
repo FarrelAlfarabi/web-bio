@@ -1,44 +1,70 @@
-.topbar {
-  position: sticky;
+.header {
+  position: fixed;
   top: 0;
-  z-index: 40;
-  backdrop-filter: saturate(180%) blur(10px);
-  background: rgba(255, 255, 255, .8);
-  border-bottom: 1px solid var(--border);
-}
-
-.topbar .brand {
-  font-weight: 800;
-  letter-spacing: .2px;
-  text-decoration: none;
-  color: var(--text);
-  font-size: 20px;
-}
-
-.topbar .nav {
-  display: none;
-  gap: 20px;
-}
-
-.topbar .nav a {
-  color: var(--muted);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.topbar .nav a:hover {
-  color: var(--accent);
-}
-
-.topbar .container {
-  padding: 14px 16px;
-  justify-content: space-between;
+  width: 100%;
+  padding: 1.25rem 2rem;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #1a202c;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
   align-items: center;
 }
 
-@media (min-width: 900px) {
-  .topbar .nav {
-    display: flex;
+.nav-links a {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.cta-btn {
+  background: #3182ce;
+  color: white !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+}
+
+.hamburger {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile Responsive Breakpoint */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Shown on mobile */
+  }
+
+  .nav-links {
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+    gap: 1.5rem;
+  }
+
+  .nav-links.active {
+    display: flex; /* Shown when menu is open */
   }
 }

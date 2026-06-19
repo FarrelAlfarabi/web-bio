@@ -10,7 +10,7 @@ export const portfolioData = {
   email: "farrel.abi.saleh@gmail.com",
   phone: "+62 851-5833-3422",
   location: "Jakarta, Indonesia",
-  linkedin: "https://linkedin.com/in/farrel-alfarabi-saleh",
+  linkedin: "https://www.linkedin.com/in/farrel-alfarabi-saleh-606722207/",
   github: "https://github.com/FarrelAlfarabi",
   
   // 2. ASSETS

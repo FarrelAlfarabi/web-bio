@@ -45,7 +45,7 @@ export default function Header() {
   return (
     <header style={headerStyle}>
       <div style={{ fontWeight: "800", fontSize: "1.5rem", color: "#1a202c", letterSpacing: "-0.5px" }}>
-        Farrel A.S.
+        Farrel Alfarabi Saleh
       </div>
       
       {/* Desktop Navigation */}

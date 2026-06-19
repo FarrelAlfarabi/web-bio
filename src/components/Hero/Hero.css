@@ -1,104 +1,66 @@
-.hero {
-  background: linear-gradient(#fafafa, #fff);
-  padding: 100px 0 80px;
-  min-height: 90vh;
+.hero-container {
+  padding: 100px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-content {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero .eyebrow {
-  text-transform: uppercase;
-  letter-spacing: .2em;
-  color: var(--muted);
-  font-size: 12px;
-  margin-bottom: 16px;
-  font-weight: 600;
-}
-
-.hero h1 {
-  font-size: 40px;
-  line-height: 1.2;
-  margin: 0 0 24px;
-  font-weight: 800;
-}
-
-@media (min-width: 900px) {
-  .hero h1 {
-    font-size: 56px;
-    margin: 0 0 32px;
-  }
-}
-
-.hero .accent {
-  color: var(--accent);
-}
-
-.hero .lede {
-  color: var(--muted);
-  max-width: 640px;
-  margin: 0 0 36px;
-  font-size: 18px;
-  line-height: 1.7;
-}
-
-.row.meta {
-  gap: 10px;
-  color: var(--muted);
-  font-size: 14px;
-  margin-top: 24px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-}
-
-.hero-visual {
-  position: relative;
-  align-self: center;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  padding: 14px;
-}
-
-.hero-visual img {
-  width: 100%;
-  height: 520px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: calc(var(--radius-lg) - 4px);
-  box-shadow: var(--shadow);
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s ease;
-}
-
-.hero-visual:hover img {
-  transform: scale(1.02);
-}
-
-.hero-visual .tilt {
-  position: absolute;
-  inset: -14px;
-  background: var(--accent-weak);
-  border-radius: var(--radius-lg);
-  z-index: 0;
-  transition: transform 0.3s ease;
-}
-
-.hero-visual:hover .tilt {
-  transform: rotate(2deg);
-}
-
-.hero .container.grid2 {
   align-items: center;
-  gap: 64px;
+  justify-content: space-between;
+  gap: 4rem;
 }
 
-@media (min-width: 900px) {
-  .hero .container.grid2 {
-    gap: 80px;
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+/* Image Styling - THIS FIXES THE SIZE */
+.hero-image-wrapper {
+  flex: 0 0 400px; /* Forces the image to take up specific desktop width */
+}
+
+.hero-profile-img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Keeps it a perfect square */
+  object-fit: cover;   /* Prevents the image from stretching */
+  border-radius: 20px; /* Modern, clean look */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive: Stack on mobile */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column-reverse; /* Image moves to bottom on mobile */
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .hero-image-wrapper {
+    flex: 0 0 100%;
+    max-width: 300px; /* Slightly smaller on mobile for better fit */
   }
 }
 
-.hero-stats {
-  margin-top: 72px;
+.btn-primary {
+  padding: 1rem 2rem;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
 }

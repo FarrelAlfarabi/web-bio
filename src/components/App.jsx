@@ -4,27 +4,27 @@ import Header from "./Header/Header";
 import Hero from "./Hero/Hero";
 import About from "./About/About";
 import Skills from "./Skills/Skills";
-import Services from "./Services/Services";
 import Projects from "./Projects/Projects";
-import Testimonials from "./Testimonials/Testimonials";
-import Blog from "./Blog/Blog";
+// NOTE: Services import removed to elevate professional positioning
 import Contact from "./Contact/Contact";
 import Footer from "./Footer/Footer";
-import "../styles/index.css";
+import "../styles/App.css";
 
-export default function App() {
+function App() {
   return (
-    <div className="site">
-      <Header data={portfolioData} />
-      <Hero data={portfolioData} />
-      <About data={portfolioData} />
-      <Skills skills={portfolioData.skills} />
-      <Services services={portfolioData.services} />
-      <Projects projects={portfolioData.projects} />
-      <Testimonials testimonials={portfolioData.testimonials} />
-      <Blog blog={portfolioData.blog} />
-      <Contact data={portfolioData} />
-      <Footer data={portfolioData} />
+    <div className="App">
+      <Header />
+      <main>
+        <Hero data={portfolioData} />
+        <About data={portfolioData} />
+        <Skills data={portfolioData} />
+        <Projects data={portfolioData} />
+        {/* Services section removed */}
+        <Contact data={portfolioData} />
+      </main>
+      <Footer />
     </div>
   );
 }
+
+export default App;

@@ -112,46 +112,65 @@ export const portfolioData = {
     },
   ],
 
-  // ---- projects (old shape — replaced in Stage 3) ----
+  // ---- case studies ----
+  projectsSection: {
+    index: "03",
+    label: "Case Studies",
+    title: "Selected work, problem to result",
+    fieldLabels: { problem: "Problem", built: "Built", result: "Result" },
+  },
   projects: [
     {
-      title: "ASEAN Regional Operations & CRM Intelligence",
-      company: "YMT ADS",
-      situation:
-        "The business managed a highly complex $200K+/month revenue environment across 4 ASEAN countries, resulting in fragmented data and siloed reporting.",
-      task: "Establish a structured planning process to improve KPI visibility and stakeholder alignment for 7 concurrent, high-stakes brand campaigns.",
-      action:
-        "Consolidated regional CRM data and daily utilization reports into centralized tracking systems. Facilitated communication between technical teams and major brand partners (Unilever, Nestlé).",
+      title: "Earthquake Monitoring Dashboard",
+      org: "BMKG",
+      year: "—",
+      role: null,
+      problem:
+        "Analysts monitoring seismic activity work against continuous waveform streams — scanning them by eye is slow, and weak events are easy to miss.",
+      built:
+        "A React dashboard that visualizes incoming seismic traces and runs STA/LTA (short-term / long-term average) detection to flag candidate events automatically, so analysts review triggered signals instead of raw streams.",
       result:
-        "Improved cross-country KPI tracking, provided leadership with real-time operational visibility, and successfully accelerated pipeline deals for enterprise clients.",
-      tags: ["CRM", "Data Consolidation", "Operations", "Stakeholder Management"],
-      link: "#",
+        "Automated first-pass event detection for the monitoring workflow — flagged events surface with their trace context, ready for analyst confirmation.",
+      stack: ["React", "JavaScript", "STA/LTA detection", "Time-series visualization"],
     },
     {
-      title: "AutoML Proof-of-Concept for Mining Operations",
-      company: "PT Freeport",
-      situation:
-        "Stakeholders required a way to bridge advanced data science models with day-to-day mining operations without overwhelming end-users with technical complexity.",
-      task: "Architect a front-end interface that translates complex automated machine learning (AutoML) outputs into actionable business intelligence.",
-      action:
-        "Leveraged React.js to build a scalable, intuitive frontend Proof-of-Concept, integrating directly with backend data models.",
+      title: "AutoML Frontend for Mining Operations",
+      org: "PT Freeport Indonesia",
+      year: "2023",
+      role: "Frontend Developer (freelance)",
+      problem:
+        "Freeport's AutoML outputs lived with the data science team — mining-operations stakeholders had no way to read model results without wading through technical tooling.",
+      built:
+        "A React proof-of-concept frontend that translates AutoML model outputs into plain operational views, integrated directly with the backend model APIs.",
       result:
-        "Delivered a robust platform that successfully proved the business value of adopting AutoML for operational data analysis, enabling data-driven decision-making.",
-      tags: ["React.js", "AutoML", "Business Intelligence", "Frontend Architecture"],
-      link: "#",
+        "The PoC made the business case: it demonstrated that AutoML results could inform day-to-day operational decisions, supporting adoption of the platform.",
+      stack: ["React.js", "REST APIs", "AutoML", "BI visualization"],
     },
     {
-      title: "Commercial Product Strategy - SPACE",
-      company: "UI Incubate 2024",
-      situation:
-        "Required a commercially viable product concept for a highly competitive university incubator program.",
-      task: "Develop a sustainable modular housing concept from scratch, proving both technical feasibility and market demand.",
-      action:
-        "Led comprehensive market research, developed the core business model, and crafted investor-facing pitches to align product development with commercial viability.",
+      title: "Court Proceedings Monitoring App",
+      org: "Universitas Indonesia — Faculty of Law",
+      year: "2023",
+      role: "Frontend Developer (freelance)",
+      problem:
+        "Tracking court proceedings meant manual, scattered record-keeping — no shared, up-to-date view of case activity.",
+      built:
+        "A cross-platform Flutter app backed by Firebase (authentication + Firestore) for logging and monitoring court proceedings from the field.",
       result:
-        "Achieved a Top 10 Finalist position out of a broad pool of entries, validating the product's market-fit and the effectiveness of the commercial strategy.",
-      tags: ["Product Strategy", "Market Research", "Business Modeling"],
-      link: "#",
+        "A working mobile monitoring tool that replaced scattered manual notes with a synchronized, queryable record.",
+      stack: ["Flutter", "Dart", "Firebase Auth", "Cloud Firestore"],
+    },
+    {
+      title: "ASEAN Campaign Operations & CRM Intelligence",
+      org: "YMT ADS",
+      year: "2025",
+      role: "Operations & Marketing Staff → Commercial Strategy Manager",
+      problem:
+        "A $200K+/month revenue operation across four ASEAN countries ran on fragmented CRM data and siloed reporting — seven concurrent brand campaigns with no unified KPI view.",
+      built:
+        "Centralized tracking: consolidated regional CRM data and daily utilization reports, established a structured planning cadence, and ran the communication line between technical teams and brand partners including Unilever and Nestlé.",
+      result:
+        "Leadership got real-time cross-country KPI visibility, enterprise pipeline deals accelerated — and the role grew into Commercial Strategy Manager after nine months.",
+      stack: ["CRM", "KPI Dashboards", "Campaign Operations", "Stakeholder Management"],
     },
   ],
 };

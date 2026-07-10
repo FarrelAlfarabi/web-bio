@@ -16,6 +16,8 @@ export default function About({ data }) {
           <img
             className="about-photo"
             src={about.image}
+            srcSet={`${about.imageSmall} 680w, ${about.image} 1200w`}
+            sizes="(max-width: 899px) 280px, 340px"
             alt={about.imageAlt}
             width="1200"
             height="876"

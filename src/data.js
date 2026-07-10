@@ -6,6 +6,7 @@
 // ============================================================
 
 import aboutImage from "./images/about.webp";
+import aboutImageSmall from "./images/about-680.webp";
 
 export const portfolioData = {
   // ---- identity ----
@@ -86,6 +87,7 @@ export const portfolioData = {
       { school: "Universitas Indonesia", degree: "BSc, Computer Science" },
     ],
     image: aboutImage,
+    imageSmall: aboutImageSmall,
   },
 
   // ---- capabilities ----

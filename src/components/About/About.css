@@ -1,34 +1,93 @@
-.info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 16px;
-  margin-top: 14px;
+.about-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  align-items: flex-start;
 }
 
-/* About image styling to fit in card */
-.card.media {
-  height: 350px;
-  max-height: 350px;
+.about-photo {
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  max-width: 340px;
 }
 
-.card.media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+.about-para {
+  color: var(--ink);
+  max-width: 62ch;
 }
 
-.info dt {
-  color: var(--muted);
-  font-size: 12px;
+.about-subhead {
+  margin: var(--s-5) 0 var(--s-2);
 }
 
-.info dd {
+/* ---- experience timeline, log-entry style ---- */
+
+.timeline {
+  list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: var(--s-2);
+  padding: var(--s-2) 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.timeline-item:last-child {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--signal);
+  padding-top: 2px;
+}
+
+.timeline-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-org {
   font-weight: 600;
 }
 
-.info a {
-  color: var(--accent);
-  text-decoration: none;
+.timeline-role {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---- education ---- */
+
+.edu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.edu-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px var(--s-2);
+  align-items: baseline;
+  padding: var(--s-1) 0;
+}
+
+.edu-degree {
+  font-weight: 600;
+}
+
+.edu-school {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 899px) {
+  .about-photo {
+    max-width: 280px;
+  }
 }

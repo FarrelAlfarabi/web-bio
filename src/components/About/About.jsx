@@ -1,31 +1,58 @@
 import React from "react";
 import "./About.css";
-// This imports your about photo
-import aboutImage from "../../images/about.png";
 
 export default function About({ data }) {
-  if (!data) return null;
+  if (!data || !data.about) return null;
+  const { about } = data;
 
   return (
-    <section id="about" className="about-section" style={{ padding: "6rem 1rem", backgroundColor: "#ffffff" }}>
-      <div className="container" style={{ maxWidth: "900px", margin: "0 auto", display: "flex", flexWrap: "wrap", alignItems: "center", gap: "2rem" }}>
-        
-        {/* About Photo Column */}
-        <div style={{ flex: "1 1 300px" }}>
-          <img src={aboutImage} alt="Farrel Working" style={{ width: "100%", borderRadius: "12px", boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1)" }} />
+    <section id="about" className="section">
+      <div className="container section-grid">
+        <div className="about-side">
+          <div className="section-marker">
+            <span className="section-index">{about.index}</span>
+            <span className="mono-label">{about.label}</span>
+          </div>
+          <img
+            className="about-photo"
+            src={about.image}
+            alt={about.imageAlt}
+            width="1200"
+            height="876"
+            loading="lazy"
+          />
         </div>
 
-        {/* Text Column */}
-        <div style={{ flex: "1 1 400px" }}>
-          <h2 style={{ fontSize: "1rem", color: "#3182ce", textTransform: "uppercase", letterSpacing: "2px", marginBottom: "1rem" }}>
-            Professional Background
-          </h2>
-          <h3 style={{ fontSize: "2.5rem", color: "#1a202c", marginBottom: "2rem", fontWeight: "bold" }}>
-            MBA & CS Hybrid
-          </h3>
-          <p style={{ fontSize: "1.15rem", color: "#4a5568", lineHeight: "1.8" }}>
-            {data.about}
-          </p>
+        <div className="about-body">
+          <h2 className="section-title">{about.title}</h2>
+          {about.paragraphs.map((paragraph) => (
+            <p key={paragraph.slice(0, 24)} className="about-para">
+              {paragraph}
+            </p>
+          ))}
+
+          <h3 className="mono-label about-subhead">{about.timelineLabel}</h3>
+          <ol className="timeline">
+            {about.timeline.map((item) => (
+              <li key={item.org} className="timeline-item">
+                <span className="timeline-period">{item.period}</span>
+                <span className="timeline-detail">
+                  <span className="timeline-org">{item.org}</span>
+                  <span className="timeline-role">{item.role}</span>
+                </span>
+              </li>
+            ))}
+          </ol>
+
+          <h3 className="mono-label about-subhead">{about.educationLabel}</h3>
+          <ul className="edu-list">
+            {about.education.map((item) => (
+              <li key={item.degree} className="edu-item">
+                <span className="edu-degree">{item.degree}</span>
+                <span className="edu-school">{item.school}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

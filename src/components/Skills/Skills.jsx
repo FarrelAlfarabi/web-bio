@@ -1,31 +1,35 @@
-import React from 'react';
-import './Skills.css';
+import React from "react";
+import "./Skills.css";
 
 export default function Skills({ data }) {
-  // Gracefully fallback if data isn't loaded yet
-  if (!data || !data.skillCategories) return null;
-
-  const { skillCategories } = data;
+  if (!data || !data.skillsSection || !data.skillCategories) return null;
+  const { skillsSection: section, skillCategories } = data;
 
   return (
-    <section id="skills" className="skills-matrix">
-      <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">Core Competencies</h2>
-          <p className="section-subtitle">Bridging technical execution with strategic business management.</p>
+    <section id="skills" className="section">
+      <div className="container section-grid">
+        <div className="section-marker">
+          <span className="section-index">{section.index}</span>
+          <span className="mono-label">{section.label}</span>
         </div>
-        
-        <div className="matrix-grid">
-          {skillCategories.map((category, index) => (
-            <div key={index} className="matrix-column">
-              <h3 className="category-title">{category.title}</h3>
-              <ul className="skill-list">
-                {category.skills.map((skill, i) => (
-                  <li key={i} className="skill-item">{skill}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+
+        <div className="skills-body">
+          <h2 className="section-title">{section.title}</h2>
+
+          <div className="skills-grid">
+            {skillCategories.map((category) => (
+              <div key={category.title} className="skills-col">
+                <h3 className="skills-col-title mono-label">{category.title}</h3>
+                <ul className="skills-list">
+                  {category.skills.map((skill) => (
+                    <li key={skill} className="skills-item">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

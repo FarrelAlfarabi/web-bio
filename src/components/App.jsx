@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <a href="#main" className="skip-link">
-        Skip to content
+        {portfolioData.ui.skipLink}
       </a>
       <Header data={portfolioData} />
       <main id="main">

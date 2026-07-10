@@ -1,77 +1,36 @@
-.skills-matrix {
-  padding: 5rem 1rem;
-  background-color: #f8fafc; /* Light professional background */
-}
-
-.skills-matrix .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.skills-matrix .section-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.skills-matrix .section-title {
-  font-size: 2.5rem;
-  color: #1a202c;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-}
-
-.skills-matrix .section-subtitle {
-  color: #718096;
-  font-size: 1.1rem;
-}
-
-.matrix-grid {
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: var(--s-4);
+  margin-top: var(--s-4);
 }
 
-.matrix-column {
-  background: #ffffff;
-  padding: 2.5rem 2rem;
-  border-radius: 12px;
-  border-top: 4px solid #3182ce; /* Professional blue accent */
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
-  transition: transform 0.3s ease;
+@media (min-width: 700px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-3);
+  }
 }
 
-.matrix-column:hover {
-  transform: translateY(-5px);
+.skills-col-title {
+  display: block;
+  color: var(--signal);
+  padding-bottom: var(--s-1);
+  border-bottom: 1px solid var(--hairline);
+  margin: 0 0 var(--s-1);
 }
 
-.category-title {
-  font-size: 1.35rem;
-  color: #2d3748;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid #edf2f7;
-  padding-bottom: 1rem;
-  font-weight: 600;
-}
-
-.skill-list {
-  list-style-type: none;
-  padding: 0;
+.skills-list {
+  list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-.skill-item {
-  margin-bottom: 1rem;
-  font-weight: 500;
-  color: #4a5568;
-  display: flex;
-  align-items: flex-start;
-  line-height: 1.5;
+.skills-item {
+  padding: var(--s-1) 0;
+  font-size: 0.95rem;
 }
 
-.skill-item::before {
-  content: "▹";
-  color: #3182ce;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  font-size: 1.2rem;
+.skills-item + .skills-item {
+  border-top: 1px dotted var(--hairline);
 }

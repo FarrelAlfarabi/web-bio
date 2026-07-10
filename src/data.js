@@ -23,6 +23,13 @@ export const portfolioData = {
       "Software engineer and market strategist in Jakarta. React dashboards for earthquake monitoring, AutoML interfaces for mining operations, and go-to-market strategy for ASEAN brands.",
   },
 
+  // ---- ui chrome ----
+  ui: {
+    skipLink: "Skip to content",
+    menuOpen: "Menu",
+    menuClose: "Close",
+  },
+
   // ---- navigation ----
   nav: [
     { label: "About", href: "#about" },
@@ -81,36 +88,58 @@ export const portfolioData = {
     image: aboutImage,
   },
 
-  // ---- skills (old shape — replaced in Stage 4) ----
+  // ---- capabilities ----
+  skillsSection: {
+    index: "02",
+    label: "Capabilities",
+    title: "What I work with",
+  },
   skillCategories: [
     {
-      title: "Product & Project Management",
+      title: "Software Engineering",
       skills: [
-        "Cross-functional Leadership",
-        "Agile & Product Roadmapping",
-        "Stakeholder Communication",
-        "Operations & Process Improvement",
-      ],
-    },
-    {
-      title: "Business Intelligence & Strategy",
-      skills: [
-        "CRM Data Consolidation",
-        "KPI Tracking & Reporting",
-        "Commercial Strategy",
-        "Market Research & Media Planning",
-      ],
-    },
-    {
-      title: "Technical Development",
-      skills: [
-        "SQL & Data Analytics",
-        "Python & Django",
         "React.js & JavaScript",
-        "Git Version Control",
+        "Python & Django",
+        "SQL",
+        "REST API integration",
+        "AS/400 / IBM i · COBOL analysis",
+        "Flutter & Firebase",
+      ],
+    },
+    {
+      title: "Data & Analytics",
+      skills: [
+        "Data cleaning & preparation",
+        "KPI dashboards & performance reporting",
+        "Campaign analytics",
+        "Regression analysis & statistical testing",
+        "Advanced Excel / Google Sheets",
+      ],
+    },
+    {
+      title: "Strategy & Delivery",
+      skills: [
+        "Commercial strategy",
+        "Market research & media planning",
+        "Cross-functional coordination",
+        "Stakeholder communication",
+        "Figma (working knowledge)",
       ],
     },
   ],
+
+  // ---- contact ----
+  contactSection: {
+    index: "04",
+    label: "Contact",
+    title: "Open to the right problem",
+    body: "Engineering role, strategy brief, or something in between — if it sits where systems meet the market, I want to hear about it. Email is fastest.",
+    links: [
+      { label: "Email me", href: "mailto:farrel.abi.saleh@gmail.com", primary: true },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/farrel-alfarabi-saleh-606722207/", external: true },
+      { label: "GitHub", href: "https://github.com/FarrelAlfarabi", external: true },
+    ],
+  },
 
   // ---- case studies ----
   projectsSection: {

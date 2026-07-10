@@ -38,7 +38,7 @@ export default function Header({ data }) {
           aria-expanded={open}
           aria-controls="site-nav"
         >
-          {open ? "Close" : "Menu"}
+          {open ? data.ui.menuClose : data.ui.menuOpen}
         </button>
 
         <nav

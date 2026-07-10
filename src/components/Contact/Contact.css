@@ -1,31 +1,11 @@
-.cta {
-  background: linear-gradient(0deg, #b8be9a33, #b8be9a33);
+.contact-copy {
+  color: var(--muted);
+  max-width: 52ch;
+  margin-bottom: var(--s-4);
 }
 
-.form {
-  display: block;
-}
-
-.form .row {
-  gap: 12px;
-}
-
-.form input,
-.form textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  outline: none;
-  font: inherit;
-  color: var(--text);
-  background: #fff;
-}
-
-.form textarea {
-  resize: vertical;
-}
-
-.form .btn {
-  margin-top: 10px;
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
 }

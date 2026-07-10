@@ -17,6 +17,14 @@ export const portfolioData = {
   heroImage: heroImage,
   aboutImage: aboutImage,
 
+  // NAVIGATION
+  nav: [
+    { label: "About", href: "#about" },
+    { label: "Capabilities", href: "#skills" },
+    { label: "Case Studies", href: "#projects" },
+    { label: "Contact", href: "#contact", cta: true },
+  ],
+
   // 3. HERO SECTION (Value Proposition)
   tagline: "Bridging Data Insights and Technical Execution",
   heroDescription: "I transform complex data and operational bottlenecks into scalable digital solutions. With an MBA in Marketing and a CS background, I specialize in Product Management, Business Intelligence, and cross-functional leadership to drive measurable ROI.",

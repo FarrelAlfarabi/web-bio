@@ -50,3 +50,6 @@ Thumbs.db
 staticfiles/
 media/
 
+
+# archived local artifacts
+build.zip

@@ -9,9 +9,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "engines": {
-    "python": "3.12.x"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",

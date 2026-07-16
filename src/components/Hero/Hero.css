@@ -1,5 +1,45 @@
 .hero {
-  padding: var(--s-7) 0 var(--s-6);
+  padding: var(--s-6) 0 var(--s-6);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-5);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: var(--s-6);
+  }
+}
+
+/* mounted dossier photo: panel matting + hairline frame */
+.hero-portrait {
+  margin: 0;
+  max-width: 300px;
+  justify-self: start;
+}
+
+@media (min-width: 900px) {
+  .hero-portrait {
+    max-width: 380px;
+    justify-self: end;
+  }
+}
+
+.hero-portrait img {
+  background: var(--panel);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: var(--s-1);
+}
+
+.hero-portrait-caption {
+  margin-top: var(--s-1);
+  font-size: 11px;
 }
 
 .hero-eyebrow {
@@ -85,9 +125,14 @@
 .hero-headline,
 .hero-subline,
 .hero-ctas,
+.hero-portrait,
 .hero-stats,
 .seismo-figure {
   animation: hero-rise 0.55s ease-out both;
+}
+
+.hero-portrait {
+  animation-delay: 0.16s;
 }
 
 .hero-headline {

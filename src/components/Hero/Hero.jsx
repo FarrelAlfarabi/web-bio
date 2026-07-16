@@ -22,19 +22,39 @@ export default function Hero({ data }) {
   return (
     <section id="hero" className="hero" aria-label="Introduction">
       <div className="container">
-        <p className="hero-eyebrow mono-label">{hero.eyebrow}</p>
-        <h1 className="hero-headline">{hero.headline}</h1>
-        <p className="hero-subline">{hero.subline}</p>
-        <div className="hero-ctas">
-          {hero.ctas.map((cta) => (
-            <a
-              key={cta.href}
-              href={cta.href}
-              className={cta.primary ? "btn" : "btn ghost"}
-            >
-              {cta.label}
-            </a>
-          ))}
+        <div className="hero-grid">
+          <div className="hero-main">
+            <p className="hero-eyebrow mono-label">{hero.eyebrow}</p>
+            <h1 className="hero-headline">{hero.headline}</h1>
+            <p className="hero-subline">{hero.subline}</p>
+            <div className="hero-ctas">
+              {hero.ctas.map((cta) => (
+                <a
+                  key={cta.href}
+                  href={cta.href}
+                  className={cta.primary ? "btn" : "btn ghost"}
+                >
+                  {cta.label}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {hero.portrait && (
+            <figure className="hero-portrait">
+              <img
+                src={hero.portrait}
+                srcSet={`${hero.portraitSmall} 480w, ${hero.portrait} 800w`}
+                sizes="(max-width: 899px) 300px, 380px"
+                alt={hero.portraitAlt}
+                width="800"
+                height="1000"
+              />
+              <figcaption className="mono-label hero-portrait-caption">
+                {hero.portraitCaption}
+              </figcaption>
+            </figure>
+          )}
         </div>
 
         {hero.stats && (

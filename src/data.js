@@ -7,6 +7,8 @@
 
 import aboutImage from "./images/about.webp";
 import aboutImageSmall from "./images/about-680.webp";
+import portraitImage from "./images/portrait.webp";
+import portraitImageSmall from "./images/portrait-480.webp";
 
 export const portfolioData = {
   // ---- identity ----
@@ -56,6 +58,10 @@ export const portfolioData = {
       { value: "9 mo", label: "staff → strategy manager" },
     ],
     traceCaption: "fig. 01 — finding the signal in the noise",
+    portrait: portraitImage,
+    portraitSmall: portraitImageSmall,
+    portraitAlt: "Portrait of Farrel Alfarabi Saleh, arms crossed, in a black blazer",
+    portraitCaption: "Farrel Alfarabi Saleh — Jakarta, ID",
   },
 
   // ---- about ----

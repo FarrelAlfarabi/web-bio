@@ -37,6 +37,17 @@ export default function Hero({ data }) {
           ))}
         </div>
 
+        {hero.stats && (
+          <ul className="hero-stats">
+            {hero.stats.map((stat) => (
+              <li key={stat.label} className="hero-stat">
+                <span className="hero-stat-value">{stat.value}</span>
+                <span className="hero-stat-label">{stat.label}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
         <figure className="seismo-figure">
           <svg
             className="seismo"

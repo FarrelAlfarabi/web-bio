@@ -11,7 +11,7 @@ import aboutImageSmall from "./images/about-680.webp";
 export const portfolioData = {
   // ---- identity ----
   name: "Farrel Alfarabi Saleh",
-  role: "Software Engineer & Market Strategist",
+  role: "Marketing Strategy × Business Intelligence",
   email: "farrel.abi.saleh@gmail.com",
   location: "Jakarta, Indonesia",
   linkedin: "https://www.linkedin.com/in/farrel-alfarabi-saleh-606722207/",
@@ -19,9 +19,9 @@ export const portfolioData = {
 
   // ---- document meta (mirrored statically in public/index.html) ----
   meta: {
-    title: "Farrel Alfarabi Saleh — Software Engineer & Market Strategist",
+    title: "Farrel Alfarabi Saleh — Marketing Strategy & Business Intelligence",
     description:
-      "Software engineer and market strategist in Jakarta. React dashboards for earthquake monitoring, AutoML interfaces for mining operations, and go-to-market strategy for ASEAN brands.",
+      "Marketing strategist and business-intelligence analyst in Jakarta, with an engineer's toolkit. Ran $200K+/month campaign operations across four ASEAN markets for brands like Unilever and Nestlé — and builds his own dashboards.",
   },
 
   // ---- ui chrome ----
@@ -35,31 +35,37 @@ export const portfolioData = {
   nav: [
     { label: "About", href: "#about" },
     { label: "Capabilities", href: "#skills" },
-    { label: "Case Studies", href: "#projects" },
+    { label: "Experience", href: "#projects" },
     { label: "Contact", href: "#contact", cta: true },
   ],
 
   // ---- hero ----
   hero: {
-    eyebrow: "Software Engineer × Market Strategist — Jakarta, ID",
-    headline: "I build software, and the business case for it.",
+    eyebrow: "Marketing Strategy × Business Intelligence — Jakarta, ID",
+    headline: "Data in. Strategy out. I build the tools in between.",
     subline:
-      "Computer science graduate and MBA in Marketing, both from Universitas Indonesia. I've shipped an earthquake-monitoring dashboard for BMKG, AutoML interfaces for Freeport Indonesia, and commercial strategy for consumer brands across ASEAN.",
+      "Most recently at YMT ADS: campaign operations and CRM intelligence for a $200K+/month portfolio across four ASEAN markets, with brand partners including Unilever and Nestlé — promoted to Commercial Strategy Manager within the year. MBA in Marketing + BSc in Computer Science, Universitas Indonesia.",
     ctas: [
-      { label: "View case studies", href: "#projects", primary: true },
+      { label: "View experience", href: "#projects", primary: true },
       { label: "Get in touch", href: "#contact" },
     ],
-    traceCaption: "fig. 01 — seismic trace / STA-LTA event detection",
+    stats: [
+      { value: "$200K+", label: "monthly revenue ops managed" },
+      { value: "4", label: "ASEAN markets" },
+      { value: "7", label: "concurrent brand campaigns" },
+      { value: "9 mo", label: "staff → strategy manager" },
+    ],
+    traceCaption: "fig. 01 — finding the signal in the noise",
   },
 
   // ---- about ----
   about: {
     label: "About",
     index: "01",
-    title: "Engineer's toolkit, strategist's brief",
+    title: "Strategist's brief, engineer's toolkit",
     paragraphs: [
-      "I work in the space between the codebase and the market. On one side: React dashboards that detect earthquakes, machine-learning interfaces for mining operators, and mobile apps built for the courtroom. On the other: nine months running campaign operations for ASEAN consumer brands at YMT ADS, which ended in a promotion to Commercial Strategy Manager.",
-      "These days I develop core banking systems and application integrations in Jakarta. I've also taken a modular-housing venture concept to a Top-10 finalist finish at UI Incubate 2024 — market research, business model, and investor pitch included.",
+      "I'm a marketing strategist and business-intelligence operator with an unusual edge: I write production code. At YMT ADS I ran campaign operations for consumer brands across four ASEAN markets — consolidating fragmented CRM data into KPI reporting leadership actually used, and coordinating seven concurrent campaigns with partners like Unilever and Nestlé. Nine months in, that work earned a promotion to Commercial Strategy Manager.",
+      "The engineering background is what makes the analytics real. When a campaign needs a tracker, a pipeline, or a dashboard, I build it — the same skills that shipped an earthquake-detection dashboard and an AutoML interface for Freeport Indonesia. MBA in Marketing and BSc in Computer Science, both from Universitas Indonesia; Top-10 finalist at UI Incubate 2024 with a venture concept I took from market research to investor pitch.",
     ],
     imageAlt:
       "Farrel Alfarabi Saleh at his desk, holding a tablet with wireframes, code editor on the monitor behind him",
@@ -98,34 +104,34 @@ export const portfolioData = {
   },
   skillCategories: [
     {
-      title: "Software Engineering",
+      title: "Business Intelligence & Analytics",
       skills: [
-        "React.js & JavaScript",
-        "Python & Django",
-        "SQL",
-        "REST API integration",
-        "AS/400 / IBM i · COBOL analysis",
-        "Flutter & Firebase",
-      ],
-    },
-    {
-      title: "Data & Analytics",
-      skills: [
-        "Data cleaning & preparation",
         "KPI dashboards & performance reporting",
         "Campaign analytics",
+        "CRM data consolidation",
         "Regression analysis & statistical testing",
+        "Data cleaning & preparation",
         "Advanced Excel / Google Sheets",
       ],
     },
     {
-      title: "Strategy & Delivery",
+      title: "Marketing & Strategy",
       skills: [
         "Commercial strategy",
         "Market research & media planning",
+        "Brand partner management",
         "Cross-functional coordination",
         "Stakeholder communication",
-        "Figma (working knowledge)",
+      ],
+    },
+    {
+      title: "Digital & Engineering",
+      skills: [
+        "SQL",
+        "React.js & JavaScript",
+        "Python & Django",
+        "REST API integration",
+        "Flutter & Firebase",
       ],
     },
   ],
@@ -135,7 +141,7 @@ export const portfolioData = {
     index: "04",
     label: "Contact",
     title: "Open to the right problem",
-    body: "Engineering role, strategy brief, or something in between — if it sits where systems meet the market, I want to hear about it. Email is fastest.",
+    body: "Business intelligence, marketing strategy, or a digital role in between — if it needs someone who can read the data and build the tooling, I want to hear about it. Email is fastest.",
     links: [
       { label: "Email me", href: "mailto:farrel.abi.saleh@gmail.com", primary: true },
       { label: "LinkedIn", href: "https://www.linkedin.com/in/farrel-alfarabi-saleh-606722207/", external: true },
@@ -146,23 +152,23 @@ export const portfolioData = {
   // ---- case studies ----
   projectsSection: {
     index: "03",
-    label: "Case Studies",
-    title: "Selected work, problem to result",
+    label: "Experience",
+    title: "Recent work, problem to result",
     fieldLabels: { problem: "Problem", built: "Built", result: "Result" },
   },
   projects: [
     {
-      title: "Earthquake Monitoring Dashboard",
-      org: "BMKG",
-      year: "—",
-      role: null,
+      title: "ASEAN Campaign Operations & CRM Intelligence",
+      org: "YMT ADS",
+      year: "2025",
+      role: "Operations & Marketing Staff → Commercial Strategy Manager",
       problem:
-        "Analysts monitoring seismic activity work against continuous waveform streams — scanning them by eye is slow, and weak events are easy to miss.",
+        "A $200K+/month revenue operation across four ASEAN countries ran on fragmented CRM data and siloed reporting — seven concurrent brand campaigns with no unified KPI view.",
       built:
-        "A React dashboard that visualizes incoming seismic traces and runs STA/LTA (short-term / long-term average) detection to flag candidate events automatically, so analysts review triggered signals instead of raw streams.",
+        "Centralized tracking: consolidated regional CRM data and daily utilization reports into KPI dashboards, established a structured planning cadence, and ran the communication line between technical teams and brand partners including Unilever and Nestlé.",
       result:
-        "Automated first-pass event detection for the monitoring workflow — flagged events surface with their trace context, ready for analyst confirmation.",
-      stack: ["React", "JavaScript", "STA/LTA detection", "Time-series visualization"],
+        "Leadership got real-time cross-country KPI visibility, enterprise pipeline deals accelerated — and the role grew into Commercial Strategy Manager after nine months.",
+      stack: ["CRM", "KPI Dashboards", "Campaign Operations", "Stakeholder Management"],
     },
     {
       title: "AutoML Frontend for Mining Operations",
@@ -178,6 +184,19 @@ export const portfolioData = {
       stack: ["React.js", "REST APIs", "AutoML", "BI visualization"],
     },
     {
+      title: "Earthquake Monitoring Dashboard",
+      org: "BMKG",
+      year: "—",
+      role: null,
+      problem:
+        "Analysts monitoring seismic activity work against continuous waveform streams — scanning them by eye is slow, and weak events are easy to miss.",
+      built:
+        "A React dashboard that visualizes incoming seismic traces and runs STA/LTA (short-term / long-term average) detection to flag candidate events automatically, so analysts review triggered signals instead of raw streams.",
+      result:
+        "Automated first-pass event detection for the monitoring workflow — flagged events surface with their trace context, ready for analyst confirmation.",
+      stack: ["React", "JavaScript", "STA/LTA detection", "Time-series visualization"],
+    },
+    {
       title: "Court Proceedings Monitoring App",
       org: "Universitas Indonesia — Faculty of Law",
       year: "2023",
@@ -189,19 +208,6 @@ export const portfolioData = {
       result:
         "A working mobile monitoring tool that replaced scattered manual notes with a synchronized, queryable record.",
       stack: ["Flutter", "Dart", "Firebase Auth", "Cloud Firestore"],
-    },
-    {
-      title: "ASEAN Campaign Operations & CRM Intelligence",
-      org: "YMT ADS",
-      year: "2025",
-      role: "Operations & Marketing Staff → Commercial Strategy Manager",
-      problem:
-        "A $200K+/month revenue operation across four ASEAN countries ran on fragmented CRM data and siloed reporting — seven concurrent brand campaigns with no unified KPI view.",
-      built:
-        "Centralized tracking: consolidated regional CRM data and daily utilization reports, established a structured planning cadence, and ran the communication line between technical teams and brand partners including Unilever and Nestlé.",
-      result:
-        "Leadership got real-time cross-country KPI visibility, enterprise pipeline deals accelerated — and the role grew into Commercial Strategy Manager after nine months.",
-      stack: ["CRM", "KPI Dashboards", "Campaign Operations", "Stakeholder Management"],
     },
   ],
 };

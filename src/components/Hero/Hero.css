@@ -16,7 +16,8 @@
   }
 }
 
-/* mounted dossier photo: panel matting + hairline frame */
+/* mounted dossier photo: panel matting, hairline frame, an offset
+   "echo" outline behind, and signal-red viewfinder corner brackets */
 .hero-portrait {
   margin: 0;
   max-width: 300px;
@@ -30,15 +31,65 @@
   }
 }
 
-.hero-portrait img {
+.hero-portrait-frame {
+  position: relative;
+}
+
+.hero-portrait-frame img {
   background: var(--panel);
   border: 1px solid var(--hairline);
   border-radius: var(--radius);
   padding: var(--s-1);
 }
 
+/* echo outline: technical-drawing double frame, offset down-right */
+.hero-portrait-frame::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  z-index: -1;
+}
+
+/* viewfinder brackets on all four corners; they breathe outward on hover */
+.hero-portrait-frame::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--signal), var(--signal)),
+    linear-gradient(var(--signal), var(--signal)),
+    linear-gradient(var(--signal), var(--signal)),
+    linear-gradient(var(--signal), var(--signal)),
+    linear-gradient(var(--signal), var(--signal)),
+    linear-gradient(var(--signal), var(--signal)),
+    linear-gradient(var(--signal), var(--signal)),
+    linear-gradient(var(--signal), var(--signal));
+  background-position:
+    top left, top left,
+    top right, top right,
+    bottom left, bottom left,
+    bottom right, bottom right;
+  background-size:
+    20px 2px, 2px 20px,
+    20px 2px, 2px 20px,
+    20px 2px, 2px 20px,
+    20px 2px, 2px 20px;
+  background-repeat: no-repeat;
+  transition: inset 0.25s ease;
+}
+
+.hero-portrait:hover .hero-portrait-frame::after {
+  inset: -11px;
+}
+
 .hero-portrait-caption {
-  margin-top: var(--s-1);
+  margin-top: var(--s-2);
   font-size: 11px;
 }
 

@@ -6,19 +6,24 @@ export default function Projects({ data }) {
   const { projectsSection: section, projects } = data;
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section" data-reveal-line>
       <div className="container section-grid">
-        <div className="section-marker">
+        <div className="section-marker" data-reveal>
           <span className="section-index">{section.index}</span>
           <span className="mono-label">{section.label}</span>
         </div>
 
         <div className="cs-body">
-          <h2 className="section-title">{section.title}</h2>
+          <h2 className="section-title" data-reveal>{section.title}</h2>
 
           <ol className="cs-list">
             {projects.map((project, i) => (
-              <li key={project.title} className="cs-entry">
+              <li
+                key={project.title}
+                className="cs-entry"
+                data-reveal
+                style={{ "--reveal-delay": `${Math.min(i, 1) * 90}ms` }}
+              >
                 <div className="cs-head">
                   <span className="cs-no">
                     {section.index}.{i + 1}

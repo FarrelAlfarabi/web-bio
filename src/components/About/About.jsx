@@ -6,9 +6,9 @@ export default function About({ data }) {
   const { about } = data;
 
   return (
-    <section id="about" className="section">
+    <section id="about" className="section" data-reveal-line>
       <div className="container section-grid">
-        <div className="about-side">
+        <div className="about-side" data-reveal>
           <div className="section-marker">
             <span className="section-index">{about.index}</span>
             <span className="mono-label">{about.label}</span>
@@ -25,7 +25,7 @@ export default function About({ data }) {
           />
         </div>
 
-        <div className="about-body">
+        <div className="about-body" data-reveal style={{ "--reveal-delay": "120ms" }}>
           <h2 className="section-title">{about.title}</h2>
           {about.paragraphs.map((paragraph) => (
             <p key={paragraph.slice(0, 24)} className="about-para">

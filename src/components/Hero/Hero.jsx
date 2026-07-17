@@ -42,14 +42,16 @@ export default function Hero({ data }) {
 
           {hero.portrait && (
             <figure className="hero-portrait">
-              <img
-                src={hero.portrait}
-                srcSet={`${hero.portraitSmall} 480w, ${hero.portrait} 800w`}
-                sizes="(max-width: 899px) 300px, 380px"
-                alt={hero.portraitAlt}
-                width="800"
-                height="1000"
-              />
+              <div className="hero-portrait-frame">
+                <img
+                  src={hero.portrait}
+                  srcSet={`${hero.portraitSmall} 480w, ${hero.portrait} 800w`}
+                  sizes="(max-width: 899px) 300px, 380px"
+                  alt={hero.portraitAlt}
+                  width="800"
+                  height="1000"
+                />
+              </div>
               <figcaption className="mono-label hero-portrait-caption">
                 {hero.portraitCaption}
               </figcaption>

@@ -6,19 +6,24 @@ export default function Skills({ data }) {
   const { skillsSection: section, skillCategories } = data;
 
   return (
-    <section id="skills" className="section">
+    <section id="skills" className="section" data-reveal-line>
       <div className="container section-grid">
-        <div className="section-marker">
+        <div className="section-marker" data-reveal>
           <span className="section-index">{section.index}</span>
           <span className="mono-label">{section.label}</span>
         </div>
 
         <div className="skills-body">
-          <h2 className="section-title">{section.title}</h2>
+          <h2 className="section-title" data-reveal>{section.title}</h2>
 
           <div className="skills-grid">
-            {skillCategories.map((category) => (
-              <div key={category.title} className="skills-col">
+            {skillCategories.map((category, i) => (
+              <div
+                key={category.title}
+                className="skills-col"
+                data-reveal
+                style={{ "--reveal-delay": `${i * 110}ms` }}
+              >
                 <h3 className="skills-col-title mono-label">{category.title}</h3>
                 <ul className="skills-list">
                   {category.skills.map((skill) => (

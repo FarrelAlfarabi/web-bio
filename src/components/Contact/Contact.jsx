@@ -6,14 +6,14 @@ export default function Contact({ data }) {
   const { contactSection: section } = data;
 
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section" data-reveal-line>
       <div className="container section-grid">
-        <div className="section-marker">
+        <div className="section-marker" data-reveal>
           <span className="section-index">{section.index}</span>
           <span className="mono-label">{section.label}</span>
         </div>
 
-        <div className="contact-body">
+        <div className="contact-body" data-reveal style={{ "--reveal-delay": "120ms" }}>
           <h2 className="section-title">{section.title}</h2>
           <p className="contact-copy">{section.body}</p>
           <div className="contact-links">
